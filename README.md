@@ -19,6 +19,8 @@ DB_PASS=<mongo db password>
 ## Public folder :
 The public folder contains a built Angular 4 app, you can  replace it with your own single page app.
 
+The client angular app [repo](https://github.com/AdelMahjoub/ng-nightlife-client).
+
 Refer to server.js, to check the api endpoints.
 ## Development mode : 
 ```$ npm run dev```
