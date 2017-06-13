@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nf run nodemon server",
-    "start": "NODE_ENV=production nf start"
+    "start": "nf start"
   },
   "author": "Adel Mahjoub",
   "license": "ISC",
