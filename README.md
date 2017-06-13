@@ -2,6 +2,8 @@
 ## Dependencies:
 [nodemon](https://github.com/remy/nodemon) only for devolepment.
 
+[forever](https://github.com/foreverjs/forever)
+
 [node-foreman](https://github.com/strongloop/node-foreman)
 ## Env variables:
 Add a **.env** file at the root directory
