@@ -1,0 +1,26 @@
+{
+  "name": "ng-nightlife-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nf run nodemon server",
+    "start": "NODE_ENV=production nf start"
+  },
+  "author": "Adel Mahjoub",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "0.4.0",
+    "bcrypt": "1.0.2",
+    "bluebird": "3.5.0",
+    "body-parser": "1.17.2",
+    "cors": "2.8.3",
+    "express": "4.15.3",
+    "express-jwt": "5.3.0",
+    "helmet": "3.6.1",
+    "jsonwebtoken": "7.4.1",
+    "mongoose": "4.10.5",
+    "node-cache": "4.1.1",
+    "validator": "7.0.0"
+  }
+}
