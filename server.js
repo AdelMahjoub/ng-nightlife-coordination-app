@@ -73,6 +73,7 @@ app.use(
   .unless({
     path: [
       '/',
+      '/favicon.ico',
       '/places',
       '/login',
       '/signup',
