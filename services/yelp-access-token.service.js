@@ -63,7 +63,8 @@ const updateYelpToken = function(callback) {
 
   // post request to yelp then cache the api token  
   const req = https.request(options, (res) => {
-    res.on('data', (data) => {
+    let data = '';
+    res.on('data', (chunk) => {
       /////////////////////////////////////
       // data
       // {
@@ -72,12 +73,19 @@ const updateYelpToken = function(callback) {
       //   "expires_in": 15552000
       // }
       ///////////////////////////////////////
-      let payload = JSON.parse(data.toString());
-      cache.set('yelpToken', payload['access_token'], payload['token_type'], (err, success) => {
-        if(!err && success) {
-          return getYelpToken(callback);
-        }
-      });
+      data += chunk;
+      res.on('end', () => {
+        console.log(data)
+        let payload = JSON.parse(data.toString());
+        cache.set('yelpToken', payload['access_token'], payload['token_type'], (err, success) => {
+          if(err) {
+            return console.log('Yelp service down');
+          }
+          if(!err && success) {
+            return getYelpToken(callback);
+          }
+        });
+      })
     });
   });
 
