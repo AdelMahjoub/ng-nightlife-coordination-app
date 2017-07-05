@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "6.11.0",
+    "npm": "5.0.3"
+  },
   "scripts": {
     "dev": "nf run nodemon server",
     "start": "NODE_ENV=production nf start"
