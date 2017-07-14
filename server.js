@@ -350,7 +350,6 @@ app.get('*', (req, res, next) => {
 
 // Redirect all unauthorizd routes routes to /
 app.use((err, req, res, next) => {
-  console.log('error: ' + err);
   res.redirect('/')
 });
 
