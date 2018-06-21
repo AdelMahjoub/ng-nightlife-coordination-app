@@ -9,7 +9,9 @@
   },
   "scripts": {
     "dev": "nf run nodemon server",
-    "start": "NODE_ENV=production nf start"
+    "start": "NODE_ENV=production nf start",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Adel Mahjoub",
   "license": "ISC",
@@ -24,9 +26,11 @@
     "foreman": "^2.0.0",
     "forever": "0.15.3",
     "helmet": "3.6.1",
-    "jsonwebtoken": "7.4.1",
+    "jsonwebtoken": "8.0.0",
     "mongoose": "4.11.14",
     "node-cache": "4.1.1",
-    "validator": "7.0.0"
-  }
+    "validator": "7.0.0",
+    "snyk": "^1.83.0"
+  },
+  "snyk": true
 }
